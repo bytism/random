@@ -35,10 +35,10 @@ for _, Value in pairs(Connections) do
 end
 
 for Index, Value in pairs(Module.Events) do
-    local Connections = {
-        Value.EventInstance:GetPropertyChangedSignal('Name'),
-        Value.EventInstance.ChildAdded
-    }
+	local Connections = {
+		Value.EventInstance:GetPropertyChangedSignal('Name'),
+		Value.EventInstance.ChildAdded
+	}
 
 	for _, Value in pairs(Connections) do
 		for _, Connection in pairs(getconnections(Value)) do
