@@ -7,9 +7,7 @@ local function Hook_Adonis(meta_defs)
                 local dummy_func = function()
                     return pcall(coroutine.close, coroutine.running())
                 end
-                print("hooking funcs")
                 hookfunction(func, dummy_func)
-                
             end
         end
     end
